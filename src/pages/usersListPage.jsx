@@ -1,11 +1,8 @@
 import React from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, Outlet, useParams } from "react-router-dom";
 import UsersTable from "./usersTable";
 import UserPage from "./userPage";
 import UserEditPage from "./userEditPage";
-// import UserPage from "./userPage";
-// import UsersTable from "./usersTaple";
-// import UserEditPage from "./userEditPage";
 
 const UsersListPage = () => {
     const { userId, edit } = useParams();
@@ -18,8 +15,8 @@ const UsersListPage = () => {
             <h1>UsersListPage</h1>
             {userId
                 ? (edit
-                    ? (<UserEditPage id={userId}/>)
-                    : (<UserPage id={userId}/>)
+                    ? (<UserEditPage />)
+                    : (<UserPage />)
                 )
                 : (<UsersTable/>)
             }

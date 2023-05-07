@@ -4,7 +4,7 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import UsersListPage from './pages/usersListPage';
 import UserPage from './pages/userPage';
 import UserEditPage from './pages/userEditPage';
-// import UsersTable from './pages/usersTable';
+import UsersTable from './pages/usersTable';
 
 function App() {
   return (
@@ -13,11 +13,10 @@ function App() {
       <Routes>
         <Route index element={<MainPage/>}/>
         <Route path="users/*" element={<UsersListPage/>}>
-          <Route path=":userId/*" element={<UserPage />}>
-            <Route path=":edit/*" element={<UserEditPage />}/>
-            <Route path=":edit/*" element={<Navigate to="/edit"/>}/>
+          <Route index element={<UsersTable/>} />
+          <Route path=":userId/*" element={<UserPage/>}>
+            <Route path=":edit" element={<UserEditPage />}/>
           </Route>
-          <Route path=":userId/*" element={<Navigate to="/users"/>}/>
         </Route>
         <Route path="*" element={<Navigate to="/"/>}/>
       </Routes>

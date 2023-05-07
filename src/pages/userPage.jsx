@@ -1,18 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Outlet, useParams } from "react-router-dom";
 
-const UserPage = ({id}) => {
+const UserPage = () => {
+    const { userId } = useParams();
     return (
         <>
-            <h1>{`User with id: ${id} profile`}</h1>
+            <h1>{`User with id: ${userId} profile`}</h1>
+            {/* <Outlet/> // вызываются все вложенные компоненты и UserPage, и UserEditPage */} 
             <ul>
                 <li>
-                    <Link to="">
+                    <Link to={"/users"}>
                         <h3>Back to users list page</h3>
                     </Link>
                 </li>
                 <li>
-                    <Link to={`${id}/edit`}>
+                    <Link to={`/users/${userId}/edit`}>
                         <h3>Edit this User info</h3>
                     </Link>
                 </li>
