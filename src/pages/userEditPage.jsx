@@ -5,13 +5,13 @@ const UserEditPage = ({ id }) => {
     return (
         <div>
             <h1>{`Edit info of User with id: ${id}`}</h1>
-            <Link to={`/users/${id}/`}>
+            <Link to={`${id}`}>
                 <h3>User profile profile</h3>
             </Link>
-            <Link to={`/users/${Number(id)+1}/`}>
+            <Link to={`${Number(id)+1}`}>
                 <h3>Another User profile</h3>
             </Link>
-            <Link to="/users/">
+            <Link to="">
                 <h3>Back to users list page</h3>
             </Link>
         </div>

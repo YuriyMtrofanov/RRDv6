@@ -1,16 +1,18 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
+import UsersTable from "./usersTable";
 import UserPage from "./userPage";
-import UsersTable from "./usersTaple";
 import UserEditPage from "./userEditPage";
+// import UserPage from "./userPage";
+// import UsersTable from "./usersTaple";
+// import UserEditPage from "./userEditPage";
 
 const UsersListPage = () => {
-    const params = useParams();
-    const { userId, edit } = params;
+    const { userId, edit } = useParams();
     return (
         <>
             <h1>UsersLayout</h1>
-            <Link to='/'>
+            <Link to="/">
                 <h3>Back to Main Page</h3>
             </Link>
             <h1>UsersListPage</h1>

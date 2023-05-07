@@ -12,7 +12,7 @@ const UsersTable = () => {
     return (
         <div>
             {users.map(user => (
-                <Link key = {user.id} to = {`/users/${user.id}`}>
+                <Link key = {user.id} to = {`${user.id}`}>
                     <h3 key = {user.id}>{user.label}</h3>
                 </Link>
             ))}
