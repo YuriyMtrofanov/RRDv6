@@ -6,14 +6,14 @@ const UserEditPage = () => {
     return (
         <div>
             <h1>{`Edit info of User with id: ${userId}`}</h1>
-            <Link to={`${userId}`}>
-                <h3>User profile profile</h3>
+            <Link to={`/users/${userId}/`}>
+                <h3>User profile</h3>
             </Link>
-            <Link to={`${Number(userId)+1}`}>
+            <Link to={`/users/${Number(userId)+1}/`}>
                 <h3>Next User profile</h3>
             </Link>
-            <Link to="">
-                <h3>Back to users list page</h3>
+            <Link to="/users/">
+                <h3>Back to Users list page</h3>
             </Link>
         </div>
     );

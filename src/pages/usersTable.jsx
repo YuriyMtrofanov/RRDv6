@@ -11,6 +11,7 @@ const UsersTable = () => {
     ];
     return (
         <div>
+            <h1>List of all Users: </h1>
             {users.map(user => (
                 <Link key = {user.id} to = {`${user.id}`}>
                     <h3 key = {user.id}>{user.label}</h3>
